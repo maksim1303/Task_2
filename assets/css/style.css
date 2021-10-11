@@ -1,0 +1,150 @@
+/*noinspection CssUnknownTarget*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.image-stack {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+}
+.image-stack__item--top {
+    grid-column: 1 / span 8;
+    grid-row: 1; /*must be on the same row as the other image*/
+    /*padding-top: 20%; !* this pushes the image down, and keeps it proportional as it resizes*!*/
+    z-index: 1;/* make this image render on top of the bottom*/
+}
+.image-stack__item--bottom {
+    grid-column: 4 / -1;
+    grid-row: 1; /* make this image be on the same row*/
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    /*position:flex;*/
+    /*left:4.5%;*/
+    /*top:2%;*/
+    /*width:11.6%;*/
+    /*float: left;*/
+    /*margin-top: 5px;*/
+    /*padding: 14px 35px;*/
+    width:9%;
+    position:relative;
+    left:3%;
+    /*position: absolute;*/
+    /*width: 159px;*/
+    /*height: 146px;*/
+    /*left: 62px;*/
+    /*top: -50px;*/
+}
+.size{
+    width:7%;
+    left:5%;
+    top:2%;
+}
+
+.box {
+    display: flex;
+    align-items: stretch;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+/*a:link,visited,hover,active{*/
+/*    color:black;*/
+/*    text-un;*/
+/*}*/
+
+li{
+    display: inline;
+    padding: 12px 35px;
+    font-size: 18px;
+}
+/*!* Extra small devices (phones, less than 768px) *!*/
+/*!* No media query since this is the default in Bootstrap *!*/
+
+/*!* Small devices (tablets, 768px and up) *!*/
+/*@media (min-width: @screen-sm-min) { ... }*/
+
+/*!* Medium devices (desktops, 992px and up) *!*/
+/*@media (min-width: @screen-md-min) { ... }*/
+
+/*!* Large devices (large desktops, 1200px and up) *!*/
+/*@media (min-width: @screen-lg-min) { ... }*/
+
+
+ul {
+    /*background-color: #333;*/
+}
+
+*{
+    font-family: Montserrat,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position:absolute;
+    left:15.4%;
+    top:6%;
+}
+
+/*li {*/
+/*    float: left;*/
+/*}*/
+
+/*li a {*/
+/*    display: block;*/
+/*    color: black;*/
+/*    text-align: center;*/
+/*    padding: 14px 16px;*/
+/*    text-decoration: none;*/
+/*}*/
+
+.video_prewiew{
+    position: relative;
+    width: 1366px;
+    height: 722px;
+    left: 0px;
+    top: 47px;
+    display: block;
+}
+
+.play{
+    position:relative;
+    top:35%;
+    left:35%;
+    z-index: 1;
+}
+
+.picture {
+    position:relative;
+    width: 1366px;
+    height: 722px;
+}
+.picture .overlay {
+    position:absolute;
+    top: -30%;
+    left: 13%;
+    margin: 500px;
+    width: 86px;
+    height: 83px;
+}
+
+.text-style{
+    font-weight: 400;
+    font-style:normal;
+    font-size: 18px;
+    line-height: 21.94px;
+    text-align:center;
+}
+/*li a:hover {*/
+/*    background-color: #111;*/
+/*}*/
+

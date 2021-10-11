@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en-US" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="robots" content="noindex, nofollow">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>SEM.lv webpack example</title>
+        <meta name="description" content="SEM.lv webpack example wep page">
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+        <script type="text/javascript" src="js/cookieconsent.min.js"></script>
+        <script>
+            /* Configuration for cookies plugin */
+            const gaTrackingID = "xxxxxx";
+            const messageText = "This website uses cookies to ensure you get the best experience on our website.";
+            const allowText = "Accept";
+            const denyText = "Decline";
+            const linkText = "Learn more";
+            const hrefToPrivacyPolicy = "http://link-to-privacy-policy-page.lv";
+            const theDomain = "localhost";
+            /**/
+
+            var gaScriptAdded = false;
+
+            // enable cookies function
+            function enableCookies() {
+                // add google analytics script if it has not been added before
+                if( gaScriptAdded == false ) {
+                    var googleAnalytics = document.createElement("script");
+                    googleAnalytics.innerHTML = "(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', '"+gaTrackingID+"', 'auto');ga('send', 'pageview');";
+                    document.head.appendChild(googleAnalytics);
+                } else /* if google analytics script is already added, reload the page */ {
+                    location.reload();
+                }
+                gaScriptAdded = true;
+
+                // uncomment below for testing
+                //document.cookie = "mansCookie=Mans Cookie";
+                //var x = document.cookie;
+                //console.log('cookies after enabling: '+x);
+            }
+            // delete cookies function
+            window.cookieconsent.Popup.prototype.deleteCookies = function() {
+                // list of essential cookies - set as an empty array to delete everything - i.e. var essential = [];
+                var essential = ["cookieconsent_status"];
+
+                // list of cookies with specific domain name that should be specified for deletion
+                var cookiesWithDomain = ["_ga", "_gid", "_gat"];
+
+                // uncomment below for testing
+                //var x = document.cookie;
+                //console.log('cookies before delete: '+x);
+
+                // create array of cookies set
+                var cookies = document.cookie.split(";");
+
+                // loop through the cookies
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i];
+
+                    // remove spaces at the beginning of cookie name
+                    while (cookie.charAt(0)==' ') {
+                        cookie = cookie.substring(1,cookie.length);
+                    }
+                    // uncomment below for testing
+                    //console.log('cookie:'+cookie);
+
+                    // get the cookie name
+                    var eqPos = cookie.indexOf("=");
+                    var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+
+                    // delete all cookies except those listed in essential
+                    if (essential === undefined || essential.length == 0 || essential.indexOf(name) == -1) {
+                        // note assuming path is always = '/'
+
+                        // set specific domain for previously defined cookies in "cookiesWithDomain". Do not set domain for others
+                        if (cookiesWithDomain === undefined || cookiesWithDomain.length == 0 || cookiesWithDomain.indexOf(name) == -1) {
+                            document.cookie = name + "=;  path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT;";
+                        } else {
+                            document.cookie = name + "=;  path=/; domain="+theDomain+"; expires=Thu, 01 Jan 1970 00:00:00 GMT;";
+                        }
+
+                        // uncomment below for testing
+                        //console.log('deleting cookie:'+name);
+                    }
+                }
+
+                // uncomment below for testing
+                //var x = document.cookie;
+                //console.log('cookies after delete: '+x);
+            };
+
+            window.addEventListener("load", function() {
+                window.cookieconsent.initialise({
+                    "position": "bottom-right",
+                    "type": "opt-in",
+                    "revokable": true,
+                    content: {
+                      message: messageText,
+                      allow: allowText,
+                      deny: denyText,
+                      link: linkText,
+                      href: hrefToPrivacyPolicy,
+                    },
+
+                    onInitialise: function (status) {
+                      var type = this.options.type;
+                      var didConsent = this.hasConsented();
+                        var x = document.cookie;
+                        console.log('cookies on init: '+x);
+                      if (type == 'opt-in' && didConsent) {
+                        // uncomment below for testing
+                        //console.log('add cookies on initialise');
+                        enableCookies();
+                      }
+                    },
+                     
+                    onStatusChange: function(status, chosenBefore) {
+                      var type = this.options.type;
+                      var didConsent = this.hasConsented();
+                      if (type == 'opt-in' && didConsent) {
+                        // uncomment below for testing
+                        //console.log('add cookies on status change');
+                        enableCookies();
+                      }
+                    },
+                     
+                    onRevokeChoice: function() {
+                      var type = this.options.type;
+                      if (type == 'opt-in') {
+                        // uncomment below for testing
+                        //console.log('revoke choice');
+                        this.deleteCookies();
+                      }
+                    }
+                });
+            });
+        </script>
+
+        <script type="text/javascript" src="js/modernizr-3.6.0-custom.min.js"></script>
+    </head>
+    <body>
+
+        <!--[if lte IE 9]>
+        <div class="update_browser_fake_body">
+            <div class="update_browser_container">
+                <div class="update_browser">
+                    <div class="update_browser_inner">
+                        <h1>Please update your browser!</h1>
+                        <p>You are using old browser version, which is not technically supported. That way some functions maybe are not available or aren't working right. Using information below please update or use another browser. </p>
+                        <p>Free browsers - all browsers provide the same base functions and are easy to use. Choose which browser do you want to download:</p>
+                        <div class="browser_icon_wrap" class="clear">
+                            <a href="http://www.mozilla.org/en-US/firefox/new/" class="browser_link firefox">
+                                <span class="browser_icon">&nbsp;</span>
+                                <span class="browser_name">Mozilla Firefox</span>
+                            </a>
+                            <a href="https://www.google.com/intl/en/chrome/browser/" class="browser_link chrome">
+                                <span class="browser_icon">&nbsp;</span>
+                                <span class="browser_name">Google Chrome</span>
+                            </a>
+                            <a href="http://www.opera.com/" class="browser_link opera">
+                                <span class="browser_icon">&nbsp;</span>
+                                <span class="browser_name">Opera</span>
+                            </a>
+                            <a href="https://safari.en.softonic.com/" class="browser_link safari">
+                                <span class="browser_icon">&nbsp;</span>
+                                <span class="browser_name">Safari</span>
+                            </a>
+                            <a href="https://www.microsoft.com/en-us/windows/microsoft-edge" class="browser_link edge">
+                                <span class="browser_icon">&nbsp;</span>
+                                <span class="browser_name">Microsoft Edge</span>
+                            </a>
+                        </div>
+                        <div class="close_announcement_wrap">
+                            <a href="javascript:void(0)" class="close_announcement">Aizvērt</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style id="browser-notification-style">.update_browser_fake_body~*{display:none}</style>
+        <![endif]-->
+
+        <!-- site wrap -->
+        <div class="site-wrap">
+
+            <!-- site header -->
+            <header class="site-header flex-y-c bg-additional">
+                <div class="container">
+                    <div class="row m-x-0">
+                        <a href="javascript:void(0)">
+                            <div class="logo icon-bg" style="background-image: url(${require('./img/sem-logo.png')}); width: 62px; height: 25px;"></div>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <img class="logo" src="${require('./img/sem-logo.png')}">
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <!-- /site header -->
