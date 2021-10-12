@@ -12,7 +12,8 @@
 
     <link rel="stylesheet" href="assets/css/style.css"/>
     <!--    normalize css-->
-    <link rel="stylesheet" href="normalize_css/normalize.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!--[if lt IE 9]>
@@ -25,138 +26,57 @@
     </style>
 </head>
 <body>
- <div style="margin-top:5%;">
+<div class="row">
 <!--  <div class="row">-->
-<!--      <img src="assets/img/BlackLogo.png" class="logo" alt="logotips">&ndash;&gt;-->
+       <img src="assets/img/BlackLogo.png" class="logo" alt="logotips">
         <ul class="menu">
 <!--            style="margin-top:4.5%;"-->
-            <li><a href="#home">Ideja</a></li>
-            <li><a href="#news">Piesaki Sapni</a>
-            <li><a href="#contact">Uzņēmējiem</a></li>
-            <li><a href="#about">Sapņu banka</a></li>
-            <li><a href="#about">Sapņus atbalsta</a></li>
-            <li><a href="#about">99 Iedvesmas stāsti</a></li>
-            <li><a href="#about">LV</a></li>
+            <li class="menu_text"><a href="#home">Ideja</a>
+            <li class="menu_text"><a href="#news">Piesaki Sapni</a></li>
+            <li class="menu_text"><a href="#contact">Uzņēmējiem</a></li>
+            <li class="menu_text"><a href="#about">Sapņu banka</a></li>
+            <li class="menu_text"><a href="#about">Sapņus atbalsta</a></li>
+            <li class="menu_text"><a href="#about">99 Iedvesmas stāsti</a></li>
+            <li class="menu_text"><a href="#about">LV</a></li>
         </ul>
 </div>
   <div class="picture">
 <!--  <img src="assets/img/play.png" class="play" alt="play-button">&ndash;&gt;-->
 <!-- <img src="assets/img/video_prewiew.png" class="video_prewiew" alt="video_preview">&ndash;&gt;-->
-      <img src="assets/img/video_prewiew.png"/>
+      <img src="assets/img/video_prewiew.png"> <!-- style="width:100%;-->
       <img class="overlay" src="assets/img/play.svg" />
   </div>
-  <p class="text-style" style="position: relative;top:150px">
+  <p class="text-style" style="position: relative;top:150px;">
       SparkleHeart ir biedrība, kas radīta, lai palīdzētu cilvēkiem piepildīt pat<br>
       pārdrošākos sapņus. Šeit satiekas sapņotāji un viņu atbalstītāji -<br>
       uzņēmumi, kas sniedz palīdzīgu roku, lai kopā pasauli padarītu par<br>
       labāku vietu mums visiem.Mēs esam gatavi palīdzēt Tev piepildīt sapni.<br>
       Kā pamats iedvesmai - tiek radīti arī 99 stāsti par Latvijas sievietēm.
   </p>
-  <!--PhotoSwipe libberies-->
-  <script src="plugins/PhotoSwipe/dist/photoswipe.js"></script>
-  <script src="plugins/PhotoSwipe/dist/photoswipe.min.js"></script>
-  <script src="plugins/PhotoSwipe/dist/photoswipe-ui-default.js"></script>
-  <script src="plugins/PhotoSwipe/dist/photoswipe-ui-default.min.js"></script>
-  <!--PhtoSwipe libberties ending there-->
-    <!-- JavaScript -->
-    <script src="assets/js/theme.js"></script>
-  <script type="text/javascript">
-  var pswpElement = document.querySelectorAll('.pswp')[0];
-
-  // build items array
-  var items = [
-  {
-  src: 'https://placekitten.com/600/400',
-  w: 600,
-  h: 400
-  },
-  {
-  src: 'https://placekitten.com/1200/900',
-  w: 1200,
-  h: 900
-  }
-  ];
-
-  // define options (if needed)
-  var options = {
-  // optionName: 'option value'
-  // for example:
-  index: 0 // start at first slide
-  };
-
-  // Initializes and opens PhotoSwipe
-  var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-  gallery.init();
-  </script>
-
-  <button id="btn">Open PhotoSwipe</button>
-  <!-- Root element of PhotoSwipe. Must have class pswp. -->
-  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-      <!-- Background of PhotoSwipe.
-           It's a separate element as animating opacity is faster than rgba(). -->
-      <div class="pswp__bg"></div>
-
-      <!-- Slides wrapper with overflow:hidden. -->
-      <div class="pswp__scroll-wrap">
-
-          <!-- Container that holds slides.
-              PhotoSwipe keeps only 3 of them in the DOM to save memory.
-              Don't modify these 3 pswp__item elements, data is added later on. -->
-          <div class="pswp__container">
-              <div class="pswp__item"></div>
-              <div class="pswp__item"></div>
-              <div class="pswp__item"></div>
-          </div>
-
-          <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-          <div class="pswp__ui pswp__ui--hidden">
-
-              <div class="pswp__top-bar">
-
-                  <!--  Controls are self-explanatory. Order can be changed. -->
-
-                  <div class="pswp__counter"></div>
-
-                  <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                  <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                  <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                  <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                  <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
-                  <!-- element will get class pswp__preloader--active when preloader is running -->
-                  <div class="pswp__preloader">
-                      <div class="pswp__preloader__icn">
-                          <div class="pswp__preloader__cut">
-                              <div class="pswp__preloader__donut"></div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                  <div class="pswp__share-tooltip"></div>
-              </div>
-
-              <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-              </button>
-
-              <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-              </button>
-
-              <div class="pswp__caption">
-                  <div class="pswp__caption__center"></div>
-              </div>
-
-          </div>
-
-      </div>
- </div>
-<!-- Photoswipe code end there-->
-
+<!--<div style="position: relative;top:150px;">
+    <ul>
+        <li><img src="assets/img/Zanda_1.jpg" class="gallery_1"></li>
+        <li><img src="assets/img/Sibilla_4.jpg" class="gallery_1"></li>
+    </ul>
+    <ul>
+        <li style="display: block"><img src="assets/img/Brinuma_meita-15.jpg" class="galley_1"></li>
+        <li style="display: block"><img src="assets/img/Alina_1%201.jpg" class="gallery_1"></li>
+     </ul>
+    <ul>
+        <li><img src="assets/img/Anda_2%201.jpg" class="gallery_1"></li>
+    </ul>
+</div>-->
+<!-- <div style="position: relative;top:150px;"><p></p></div>-->
+<div class="container">
+    <div class="gallery">
+        <figure class="gallery__item gallery__item--1">
+            <img src="assets/img/Zanda_1.jpg" alt="Gallery image 1" class="gallery__img">
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+            <img src="assets/img/Sibilla_4.jpg" alt="Gallery image 1" class="gallery__img">
+        </figure>
+    </div>
+</div>
 
 
 

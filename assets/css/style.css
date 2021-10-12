@@ -55,7 +55,7 @@ a{
 /*    text-un;*/
 /*}*/
 
-li{
+.menu_text{
     display: inline;
     padding: 12px 35px;
     font-size: 18px;
@@ -84,15 +84,18 @@ ul {
     font-size: 18px;
     line-height: 22px;
 }
+.gallery_1{
+    margin-right: 0px; /* Отступ справа */
+    margin-bottom: 0px; /* Отступ снизу */
+}
 
 .menu{
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    /*padding: 0;*/
     overflow: hidden;
     position:absolute;
     left:15.4%;
-    top:6%;
+    top:3%;
 }
 
 /*li {*/
@@ -118,20 +121,21 @@ ul {
 
 .play{
     position:relative;
-    top:35%;
+    top:45%;
     left:35%;
     z-index: 1;
 }
 
 .picture {
     position:relative;
-    width: 1366px;
-    height: 722px;
+    width:70%;
+    /*width: 1366px;*/
+    /*height: 722px;*/
 }
 .picture .overlay {
     position:absolute;
     top: -30%;
-    left: 13%;
+    left: 5%;
     margin: 500px;
     width: 86px;
     height: 83px;
@@ -143,8 +147,48 @@ ul {
     font-size: 18px;
     line-height: 21.94px;
     text-align:center;
+    margin: 10%;
 }
 /*li a:hover {*/
 /*    background-color: #111;*/
 /*}*/
 
+/*table code*/
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.container {
+    width: 100%;
+    /*margin: 2rem auto;*/
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    /*grid-gap: 1.5rem;*/
+}
+
+.gallery__img {
+    width: 60%;
+    object-fit: fit;
+    display: block;
+}
+
+.gallery__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.gallery__item--2 {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
