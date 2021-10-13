@@ -93,9 +93,9 @@ ul {
     list-style-type: none;
     /*padding: 0;*/
     overflow: hidden;
-    position:absolute;
+    position:relative;
     left:15.4%;
-    top:3%;
+    /*top:3%;*/
 }
 
 /*li {*/
@@ -154,12 +154,12 @@ ul {
 /*}*/
 
 /*table code*/
-*::after,
+/**::after,
 *::before {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-}
+}*/
 
 .container {
     width: 100%;
@@ -197,10 +197,9 @@ ul {
     grid-row-end: 4;
 }
 */
-.img1 .img2 .img3 .img4 .img5{
-    height:75%;
-}
-.img3{
-    position: relative;
-    top:5%;
+/*.img1,.img2,.img5{
+    height:330px;
+}*/
+.img3,.img4{
+
 }
