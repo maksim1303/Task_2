@@ -175,9 +175,13 @@ ul {
 
 .gallery__img {
     width: 60%;
-    object-fit: fit;
+    object-fit: cover;
     display: block;
 }
+
+
+
+/*
 
 .gallery__item--1 {
     grid-column-start: 1;
@@ -191,4 +195,12 @@ ul {
     grid-column-end: 6;
     grid-row-start: 1;
     grid-row-end: 4;
+}
+*/
+.img1 .img2 .img3 .img4 .img5{
+    height:75%;
+}
+.img3{
+    position: relative;
+    top:5%;
 }
