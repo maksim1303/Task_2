@@ -7,9 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- Stylessheets -->
 
-    <link rel="stylesheet" href="plugins/PhotoSwipe/dist/photoswipe.css"/>
-    <link rel="stylesheet" href="plugins/PhotoSwipe/dist/default-skin/default-skin.css"/>
-
     <link rel="stylesheet" href="assets/css/style.css"/>
     <!--    normalize css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"/>
@@ -19,32 +16,23 @@
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
     <![endif]-->
-    <style>
-        li {
-          display: inline;
-        }
-    </style>
 </head>
 <body>
-<div class="row">
-<!--  <div class="row">-->
-       <img src="assets/img/BlackLogo.png" class="logo" alt="logotips">
-        <ul class="menu">
-<!--            style="margin-top:4.5%;"-->
-            <li class="menu_text"><a href="#home">Ideja</a>
-            <li class="menu_text"><a href="#news">Piesaki Sapni</a></li>
-            <li class="menu_text"><a href="#contact">Uzņēmējiem</a></li>
-            <li class="menu_text"><a href="#about">Sapņu banka</a></li>
-            <li class="menu_text"><a href="#about">Sapņus atbalsta</a></li>
-            <li class="menu_text"><a href="#about">99 Iedvesmas stāsti</a></li>
-            <li class="menu_text"><a href="#about">LV</a></li>
-        </ul>
+<div class="row" style="display: inline-block">
+    <ul class="menu">
+       <li><img src="assets/img/BlackLogo.png" class="logo" alt="logotips"></li>
+       <li class="menu_text"><a href="#home">Ideja</a>
+       <li class="menu_text"><a href="#news">Piesaki Sapni</a></li>
+       <li class="menu_text"><a href="#contact">Uzņēmējiem</a></li>
+       <li class="menu_text"><a href="#about">Sapņu banka</a></li>
+       <li class="menu_text"><a href="#about">Sapņus atbalsta</a></li>
+       <li class="menu_text"><a href="#about">99 Iedvesmas stāsti</a></li>
+       <li class="menu_text"><a href="#language">LV</a></li>
+    </ul>
 </div>
   <div class="picture">
-<!--  <img src="assets/img/play.png" class="play" alt="play-button">&ndash;&gt;-->
-<!-- <img src="assets/img/video_prewiew.png" class="video_prewiew" alt="video_preview">&ndash;&gt;-->
-      <img src="assets/img/video_prewiew.png"> <!-- style="width:100%;-->
-      <img class="overlay" src="assets/img/play.svg" />
+      <img src="assets/img/video_prewiew.png" style="width:143%; height:50%;z-index: 1;">
+      <img class="overlay" src="assets/img/play.png" />
   </div>
   <p class="text-style" style="position: relative;top:150px;">
       SparkleHeart ir biedrība, kas radīta, lai palīdzētu cilvēkiem piepildīt pat<br>
@@ -53,16 +41,78 @@
       labāku vietu mums visiem.Mēs esam gatavi palīdzēt Tev piepildīt sapni.<br>
       Kā pamats iedvesmai - tiek radīti arī 99 stāsti par Latvijas sievietēm.
   </p>
-</div>-->
-<div style="display: inline-flex;flex-direction: row;position: absolute;left:25%;">
-    <img src="assets/img/Zanda_1.jpg" alt="Gallery image 1" >
-    <img src="assets/img/Sibilla_4.jpg" alt="Gallery image 2">
-<!--    <img src="assets/img/Brinuma_meita-15.jpg" alt="Gallery image 3" class="img3">-->
-<!--    <img src="assets/img/Alina_1.jpg" alt="Gallery image 4" class="img4">-->
-    <img src="assets/img/img3.png" alt="Gallery image 3-4" >
-    <img src="assets/img/Anda_2.jpg" alt="Galery image 5" >
 </div>
-<p style="margin-top: 150px">
-</p>
+<div style="display: inline-flex;flex-direction: row;margin-left: 15%;"  >
+    <img src="assets/img/Zanda_1.jpg" alt="Gallery image 1" class="gallery__img">
+    <img src="assets/img/Sibilla_4.jpg" alt="Gallery image 2" class="gallery__img" >
+    <img src="assets/img/img3.png" alt="Gallery image 3-4" class="gallery__img">
+    <img src="assets/img/Anda_2.jpg" alt="Galery image 5" class="gallery__img">
+</div>
+<p style="margin-top: 150px;"></p>
+<div style="float:left;margin-left: 5%;">
+    <p class="question-text">VĒLIES PIEPILDĪT SAVU SAPNI?</p>
+    <button class="button-style">Sapņotājiem</button>
+</div>
+<div style=" float:right;margin-right: 5%;">
+    <p class="question-text">VĒLIES PALĪDZĒT KĀDĀM PIEPILDĪT SAPNI?</p>
+    <button class="button-style">Uzņēmējiem</button>
+</div>
+<p style="margin-top: 500px;"></p>
+    <p class="question-text" style="text-align:center;font-size: 30px;">SAZINĀTIES AR MUMS</p>
+    <form style="margin-left: 30%;">
+        <input type="text" value="Vārds, Uzvārds" style="align-content: center" class="input-style">
+        <input type="text" value="E-pasts*" class="input-style" style="margin-left: 7%"><br>
+        <input type="text" value="Telefons*" class="input-style" style="width:54%"><br>
+        <textarea cols="70" rows="6" class="input-style2">Jautājums, vai komentārs</textarea>
+    <div>* obligāti aizpildāmie lauki</div>
+        <p><input type="checkbox">  Piekrītu, ka mani dati tiks<br>
+                izmantoti likumdošanā noteiktā kārtībā un tiks saglabāti līdz brīdim, kamēr tas būs nepieciešams.</p>
+        <button class="button-style2">Sutīt</button>
+    </form>
+    <div style="background-color: #FFCB66;margin-top: 150px">
+        <br><br><br><br><br>
+        <p style=";margin-left:45%" class="question-text">ATBALSTĪTĀJI</p>
+            <div style="display: inline;margin-left:8%;">
+                <img src="assets/img/sponsor-1.png" alt="sponsor 1" class="sponsor">
+                <img src="assets/img/sponsor-2.png" alt="sponsor 2" class="sponsor">
+                <img src="assets/img/sponsor-3.png" alt="sponsor 3" class="sponsor">
+                <img src="assets/img/sponsor-4.png" alt="sponsor 4" class="sponsor">
+            </div>
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+    </div>
+    <div style="background-color: #2F4858;color: white;width: 100%;">
+        <br><br><br>
+        <div style="margin-left: 3%;">
+            <img src="assets/img/GoldenV2Logo.png">
+            <p style="margin-top: 70px;">© SparkleHeart 2020.<br> Visas tiesības aizsargātas.</p>
+        </div>
+        <ul style="margin-left: 20%; margin-top: -17%;">
+            <li><a href="#ideja" class="blue-table-link">Ideja</a></li><br><br>
+            <li class="blue-table"><a href="#sapni" class="blue-table-link">Piesaki Sapni</a></li><br><br>
+            <li class="blue-table"><a href="#uznemejumiem" class="blue-table-link">Uzņēmējiem</a></li><br><br>
+            <li class="blue-table"><a href="#sapnu_banka" class="blue-table-link">Sapņu banka</a></li><br><br>
+            <li class="blue-table"><a href="#sapnu_atbalsta" class="blue-table-link">Sapņus atbalsta</a></li><br><br>
+            <li class="blue-table"><a href="#stasti" class="blue-table-link">Iedvesmas stāsti</a></li>
+        </ul>
+        <ul style="margin-left: 40%; margin-top: -14%;">
+            <li style="font-size: 24px"> Biedrība SparkleHeart</li><br><br>
+            <li>Reģistrācijas nr. 40008293119</li><br><br>
+            <li> Banka: SWEDBANK A/S</li><br><br>
+            <li>LV52HABA0551047652465</li>
+        </ul>
+        <ul style="margin-left: 80%;margin-top: -9%;">
+            <li style="font-size: 24px">Juris Gogulis</li><br><br>
+            <li>juris.gogulis@sparkleheart.org</li><br><br>
+            <li>+37126890034</li><br><br>
+            <li>Biķernieku iela 24a - 5, LV-1006</li>
+        </ul>
+        <div style="margin-left: 92%;margin-top: 52px;">
+            <a href="https://facebook.com" target="_blank" class="blue-table-link"><img src="assets/img/fb.png"></a>
+            <a href="https://instagram.com" target="_blank"  class="blue-table-link"><img src="assets/img/ig.png" style="margin-left: 29px;"></a>
+        </div>
+        <p style="margin-left: 88%;margin-top: 50px;"><a href="privacy.html" class="blue-table-link">Privātuma politika</a></p>
+    <br>
+    </div>
 </body>
 </html>

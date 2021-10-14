@@ -1,39 +1,13 @@
 /*noinspection CssUnknownTarget*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
-.image-stack {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    position: relative;
+li {
+    display: inline;
 }
-.image-stack__item--top {
-    grid-column: 1 / span 8;
-    grid-row: 1; /*must be on the same row as the other image*/
-    /*padding-top: 20%; !* this pushes the image down, and keeps it proportional as it resizes*!*/
-    z-index: 1;/* make this image render on top of the bottom*/
-}
-.image-stack__item--bottom {
-    grid-column: 4 / -1;
-    grid-row: 1; /* make this image be on the same row*/
-    align-items: center;
-    justify-content: center;
-}
+
 .logo {
-    /*position:flex;*/
-    /*left:4.5%;*/
-    /*top:2%;*/
-    /*width:11.6%;*/
-    /*float: left;*/
-    /*margin-top: 5px;*/
-    /*padding: 14px 35px;*/
-    width:9%;
-    position:relative;
-    left:3%;
-    /*position: absolute;*/
-    /*width: 159px;*/
-    /*height: 146px;*/
-    /*left: 62px;*/
-    /*top: -50px;*/
+    margin-left:10px ;
 }
 .size{
     width:7%;
@@ -72,11 +46,6 @@ a{
 /*!* Large devices (large desktops, 1200px and up) *!*/
 /*@media (min-width: @screen-lg-min) { ... }*/
 
-
-ul {
-    /*background-color: #333;*/
-}
-
 *{
     font-family: Montserrat,sans-serif;
     font-style: normal;
@@ -84,31 +53,13 @@ ul {
     font-size: 18px;
     line-height: 22px;
 }
-.gallery_1{
-    margin-right: 0px; /* Отступ справа */
-    margin-bottom: 0px; /* Отступ снизу */
-}
 
 .menu{
     list-style-type: none;
-    /*padding: 0;*/
     overflow: hidden;
     position:relative;
     left:15.4%;
-    /*top:3%;*/
 }
-
-/*li {*/
-/*    float: left;*/
-/*}*/
-
-/*li a {*/
-/*    display: block;*/
-/*    color: black;*/
-/*    text-align: center;*/
-/*    padding: 14px 16px;*/
-/*    text-decoration: none;*/
-/*}*/
 
 .video_prewiew{
     position: relative;
@@ -123,7 +74,7 @@ ul {
     position:relative;
     top:45%;
     left:35%;
-    z-index: 1;
+    z-index: -1;
 }
 
 .picture {
@@ -134,8 +85,8 @@ ul {
 }
 .picture .overlay {
     position:absolute;
-    top: -30%;
-    left: 5%;
+    top: -10%;
+    left: 35%;
     margin: 500px;
     width: 86px;
     height: 83px;
@@ -149,23 +100,6 @@ ul {
     text-align:center;
     margin: 10%;
 }
-/*li a:hover {*/
-/*    background-color: #111;*/
-/*}*/
-
-/*table code*/
-/**::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}*/
-
-.container {
-    width: 100%;
-    /*margin: 2rem auto;*/
-}
-
 .gallery {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -174,32 +108,61 @@ ul {
 }
 
 .gallery__img {
-    width: 60%;
-    object-fit: cover;
-    display: block;
+    width: 200%;
 }
 
-
-
-/*
-
-.gallery__item--1 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 4;
+.question-text{
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
 }
-
-.gallery__item--2 {
-    grid-column-start: 3;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 4;
+.button-style{
+    margin-top: 50px;
+    position:relative;
+    left:2.5%;
+    background-color: #FFA800;
+    width:100%;
+    box-sizing: border-box;
+    border-radius: 35px;
+    outline: none;
+    width: 300px;
+    height: 50px;
+    color:white;
+    border: none;
 }
-*/
-/*.img1,.img2,.img5{
-    height:330px;
-}*/
-.img3,.img4{
-
+.input-style{
+    background: rgba(196, 196, 196, 0.4);
+    border-radius: 6px;
+    border: none;
+    width:296px;
+    height:43px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.input-style2{
+    background-color: rgba(196, 196, 196, 0.4);
+    border-radius: 6px;
+    border: none;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.button-style2{
+    margin-left: 20%;
+    background-color: #FFA800;
+    width:100%;
+    box-sizing: border-box;
+    border-radius: 35px;
+    outline: none;
+    width: 170px;
+    height: 70px;
+    color:white;
+    border: none;
+}
+.sponsor{
+    margin-left: 7%;
+}
+.blue-table-link{
+    color:white;
 }
